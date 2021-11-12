@@ -32,18 +32,19 @@ A list with the following two items:
 \item A tibble with the following columns: the name of the categorical variable, minimum, maximum, mean, quantile_1, and quantile_2. Each row holds the summary statistics for a specific group of the categorical variable.
 \item A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
 }
-
-#'@examples
-summarize_stats(data = datateachr::vancouver_trees,
-categoric_var = root_barrier,
-numeric_var = diameter)
-
-summarize_stats(data = datateachr::vancouver_trees,
-categoric_var = root_barrier,
-numeric_var = diameter,
-prob1 = 0.1,
-prob2 = 0.9)
 }
 \description{
 This function computes five summary statistics (minimum, maximum, mean, and two quantiles) of a numerical variable across the groups of a categorical variable. The function also produces a simple boxplot that allows for visual comparison between the distributions of the numerical variable across the different groups of the categorical variable.
+}
+\examples{
+summarize_stats(data = datateachr::vancouver_trees,
+               categoric_var = root_barrier,
+               numeric_var = diameter)
+
+summarize_stats(data = datateachr::vancouver_trees,
+               categoric_var = root_barrier,
+               numeric_var = diameter,
+               prob1 = 0.1,
+               prob2 = 0.9)
+
 }

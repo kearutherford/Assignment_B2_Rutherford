@@ -14,7 +14,7 @@ the categorical variable.
 Install `summarystatistics` package from GitHub:
 
 ``` r
-devtools::install_github("kearutherford/Assignment_B2_Rutherford", ref = "0.1.0")
+devtools::install_github("kearutherford/Assignment_B2_Rutherford")
 ```
 
 ## Demonstrations

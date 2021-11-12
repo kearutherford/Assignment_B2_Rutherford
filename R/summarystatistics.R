@@ -15,7 +15,7 @@
 #'    \item A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
 #' }
 #'
-#' #'@examples
+#'@examples
 #'summarize_stats(data = datateachr::vancouver_trees,
 #'                categoric_var = root_barrier,
 #'                numeric_var = diameter)
