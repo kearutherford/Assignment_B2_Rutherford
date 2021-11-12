@@ -9,10 +9,25 @@
 #' @param prob2 A numeric value between 0 and 1 that determines the percentile used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.
 #' @param na.rm A logical value that specifies if NA values should be removed before the calculation. The default is set to na.rm = TRUE.
 #'
+#'@examples
+#'summarize_stats(data = datateachr::vancouver_trees,
+#'                categoric_var = root_barrier,
+#'                numeric_var = diameter)
+#'
+#'summarize_stats(data = datateachr::vancouver_trees,
+#'                categoric_var = root_barrier,
+#'                numeric_var = diameter,
+#'                prob1 = 0.1,
+#'                prob2 = 0.9)
+#'
+#'summarize_stats(data = datateachr::vancouver_trees,
+#'                categoric_var = root_barrier,
+#'                numeric_var = genus_name)
+#'
 #' @return A list with the following two items:
 #' \itemize{
-#'    \item 1 - A tibble with the following columns: the name of the categorical variable, minimum, maximum, mean, quantile_1, and quantile_2. Each row holds the summary statistics for a specific group of the categorical variable.
-#'    \item 2 - A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
+#'    \item A tibble with the following columns: the name of the categorical variable, minimum, maximum, mean, quantile_1, and quantile_2. Each row holds the summary statistics for a specific group of the categorical variable.
+#'    \item A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
 #' }
 #' @export
 
