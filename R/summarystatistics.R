@@ -9,7 +9,13 @@
 #' @param prob2 A numeric value between 0 and 1 that determines the percentile used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.
 #' @param na.rm A logical value that specifies if NA values should be removed before the calculation. The default is set to na.rm = TRUE.
 #'
-#'@examples
+#' @return A list with the following two items:
+#' \itemize{
+#'    \item A tibble with the following columns: the name of the categorical variable, minimum, maximum, mean, quantile_1, and quantile_2. Each row holds the summary statistics for a specific group of the categorical variable.
+#'    \item A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
+#' }
+#'
+#' #'@examples
 #'summarize_stats(data = datateachr::vancouver_trees,
 #'                categoric_var = root_barrier,
 #'                numeric_var = diameter)
@@ -20,15 +26,6 @@
 #'                prob1 = 0.1,
 #'                prob2 = 0.9)
 #'
-#'summarize_stats(data = datateachr::vancouver_trees,
-#'                categoric_var = root_barrier,
-#'                numeric_var = genus_name)
-#'
-#' @return A list with the following two items:
-#' \itemize{
-#'    \item A tibble with the following columns: the name of the categorical variable, minimum, maximum, mean, quantile_1, and quantile_2. Each row holds the summary statistics for a specific group of the categorical variable.
-#'    \item A simple ggplot boxplot that summarizes the distributions of the numerical variable across the groups of the categorical variable. The boxplot shows the minimum, first quartile, median, third quartile, and maximum values of the numerical variable for each group of the categorical variable.
-#' }
 #' @export
 
 summarize_stats <- function(data, categoric_var, numeric_var, prob1 = 0.25, prob2 = 0.75, na.rm = TRUE) {
@@ -52,19 +49,19 @@ summarize_stats <- function(data, categoric_var, numeric_var, prob1 = 0.25, prob
 
   # generate a simple boxplot
   box_plot <- data %>%
-    drop_na({{ categoric_var }}, {{ numeric_var }}) %>%
-    ggplot(aes({{ categoric_var }}, {{ numeric_var }})) +
-    geom_boxplot() +
-    theme_minimal()
+    tidyr::drop_na({{ categoric_var }}, {{ numeric_var }}) %>%
+    ggplot2::ggplot(ggplot2::aes({{ categoric_var }}, {{ numeric_var }})) +
+    ggplot2::geom_boxplot() +
+    ggplot2::theme_minimal()
 
   # create a tibble of summary statistics
   summary_tibble <- data %>%
-    group_by({{ categoric_var }}) %>%
-    summarise(minimum = min({{ numeric_var }}, na.rm = na.rm),
+    dplyr::group_by({{ categoric_var }}) %>%
+    dplyr::summarise(minimum = min({{ numeric_var }}, na.rm = na.rm),
               maximum = max({{ numeric_var }}, na.rm = na.rm),
               mean = mean({{ numeric_var }}, na.rm = na.rm),
-              quantile_1 = quantile({{ numeric_var }}, probs = prob1 , na.rm = na.rm),
-              quantile_2 = quantile({{ numeric_var }}, probs = prob2, na.rm = na.rm))
+              quantile_1 = stats::quantile({{ numeric_var }}, probs = prob1 , na.rm = na.rm),
+              quantile_2 = stats::quantile({{ numeric_var }}, probs = prob2, na.rm = na.rm))
 
   output <- list(summary_tibble, box_plot) # create a list object to combine the summary tibble and boxplot
   return(output)
