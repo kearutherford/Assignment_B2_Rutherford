@@ -1,33 +1,26 @@
 
 # summarystatistics
 
-### R package description:
-
-<!-- badges: start -->
-
 The R package `summarystatistics` includes the function
 `summarize_stats`. The function computes five summary statistics
 (minimum, maximum, mean, and two quantiles) of a numerical variable
 across the groups of a categorical variable. The function also produces
 a simple boxplot that allows for visual comparison between the
 distributions of the numerical variable across the different groups of
-the categorical variable. <!-- badges: end -->
+the categorical variable.
 
-### Installation instructions:
+## Installation instructions
 
-To install the `summarystatistics` package, run the following code in
-the console:
+Install `summarystatistics` package from GitHub:
 
 ``` r
-library(devtools)
-
 devtools::install_github("kearutherford/Assignment_B2_Rutherford", ref = "0.1.0")
 ```
 
-### Demonstrations:
+## Demonstrations
 
 ``` r
-# Load required packages ----------------------------------------------------
+# Load required packages -------------------------------------------------------
 
 suppressPackageStartupMessages(library(datateachr))
 suppressPackageStartupMessages(library(tidyverse))
@@ -52,7 +45,7 @@ that a variable with a factor class will also work for this function, so
 I converted the `genus_name` variable into a factor.
 
 ``` r
-# Create a simplified data set to use in examples ------------------------------------------------------------------------------------------------------------
+# Create a simplified data set to use in examples ------------------------------
 van_trees_2 <- vancouver_trees %>%
     filter(diameter > 0, diameter < 100, # filter out improbable DBH values
     genus_name %in% c("PRUNUS", "ACER", "MAGNOLIA", "QUERCUS", "TILIA")) %>% # filter for 5 tree genera only
@@ -92,7 +85,7 @@ argument. The default arguments are kept (`prob1` = 0.25, `prob2` =
 | numeric_var   | diameter     | the input is a variable from the van_trees_2 data set with a class of numeric   |
 
 ``` r
-# Run summarize_stats() function with Van_trees_2 data set ------------------------------------------------------------------------------------------------------------
+# Run summarize_stats() function with Van_trees_2 data set ---------------------
 summarize_stats(data = van_trees_2, 
                 categoric_var = root_barrier,
                 numeric_var = diameter)
@@ -130,7 +123,7 @@ kept.
 | numeric_var   | diameter    | The input is a variable from the van_trees_2 data set with a class of numeric |
 
 ``` r
-# Run summarize_stats() function with van_trees_2 data set ------------------------------------------------------------------------------------------------------------
+# Run summarize_stats() function with van_trees_2 data set ---------------------
 summarize_stats(data = van_trees_2, 
                 categoric_var = genus_name,
                 numeric_var = diameter,
@@ -170,7 +163,7 @@ inputting a factor variable for the `numeric_var` argument.
 | numeric_var   | genus_name   | The input is a variable from the van_trees_2 data set with a class of factor    |
 
 ``` r
-# Run summarize_stats() function with van_trees_2 data set ------------------------------------------------------------------------------------------------------------
+# Run summarize_stats() function with van_trees_2 data set --------------------------------------------------------------------------------
 summarize_stats(data = van_trees_2, 
                 categoric_var = root_barrier,
                 numeric_var = genus_name)
