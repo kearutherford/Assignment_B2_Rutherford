@@ -21,5 +21,6 @@ Imports:
     tidyr
 Suggests: 
     testthat (>= 3.0.0),
-    datateachr
+    datateachr,
+    gapminder
 Config/testthat/edition: 3

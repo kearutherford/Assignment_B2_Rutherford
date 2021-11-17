@@ -26,6 +26,12 @@
 #'                prob1 = 0.1,
 #'                prob2 = 0.9)
 #'
+#'summarize_stats(data = gapminder::gapminder,
+#'                categoric_var = continent,
+#'                numeric_var = lifeExp,
+#'                prob1 = 0.2,
+#'                prob2 = 0.8)
+#'
 #' @export
 
 summarize_stats <- function(data, categoric_var, numeric_var, prob1 = 0.25, prob2 = 0.75, na.rm = TRUE) {

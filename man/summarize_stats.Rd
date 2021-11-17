@@ -47,4 +47,10 @@ summarize_stats(data = datateachr::vancouver_trees,
                prob1 = 0.1,
                prob2 = 0.9)
 
+summarize_stats(data = gapminder::gapminder,
+               categoric_var = continent,
+               numeric_var = lifeExp,
+               prob1 = 0.2,
+               prob2 = 0.8)
+
 }
