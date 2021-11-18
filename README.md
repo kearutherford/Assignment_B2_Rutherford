@@ -5,9 +5,8 @@ The R package `summarystatistics` includes the function
 `summarize_stats`. The function computes five summary statistics
 (minimum, maximum, mean, and two quantiles) of a numerical variable
 across the groups of a categorical variable. The function also produces
-a simple boxplot that allows for visual comparison between the
-distributions of the numerical variable across the different groups of
-the categorical variable.
+simple boxplots that allow for the visual comparison of distributions
+between the groups of the categorical variable.
 
 ## Installation instructions
 
@@ -47,11 +46,11 @@ This example demonstrates inputting a variable with a character class
 for the `categoric_var` argument. The default arguments are kept
 (`prob1` = 0.25, `prob2` = 0.75, `na.rm` = TRUE).
 
-| Argument      | Input           | Description of Input                                          | Class of Input |
-|:--------------|:----------------|:--------------------------------------------------------------|:---------------|
-| data          | vancouver_trees | provides an inventory of public street trees in Vancouver, BC | tbl_df         |
-| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                      | character      |
-| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches            | numeric        |
+| Argument      | Input           | Description of Input                                      | Class     |
+|:--------------|:----------------|:----------------------------------------------------------|:----------|
+| data          | vancouver_trees | provides an inventory of public street trees in Vancouver | tbl_df    |
+| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                  | character |
+| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches        | numeric   |
 
 ``` r
 # Run summarize_stats() function with vancouver_trees data set ---------------------------------------
@@ -71,11 +70,11 @@ summarize_stats(data = datateachr::vancouver_trees,
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 **Description of output:** The output is a list with two items: a tibble
-of summary statistics and a simple boxplot. For the summary tibble, the
-minimum, maximum, mean, first quartile, and third quartile were
-calculated for DBH across the two root barrier groups (Y/N). The boxplot
-shows the difference in the distributions of DBH between the two root
-barrier groups.
+of summary statistics and a simple set of boxplots. For the summary
+tibble, the minimum, maximum, mean, first quartile, and third quartile
+were calculated for DBH across the two root barrier groups (Y/N). The
+boxplots show the difference in the distributions of DBH between the two
+root barrier groups.
 
 ### Example #2: Factor variable input, alter default arguments
 
@@ -117,7 +116,7 @@ summarize_stats(data = gapminder::gapminder,
 of summary statistics and a simple boxplot. For the summary tibble, the
 minimum, maximum, mean, 10th percentile, and 90th percentile were
 calculated for life expectancy across the five continents (Africa,
-Americas, Asia, Europe, and Oceania). The boxplot shows the distribution
+Americas, Asia, Europe, and Oceania). The boxplots show the distribution
 of life expectancy for each continent.
 
 ### Example #3: Factor variable input, alter default arguments
@@ -158,7 +157,7 @@ summarize_stats(data = palmerpenguins::penguins,
 of summary statistics and a simple boxplot. For the summary tibble, the
 minimum, maximum, mean, 20th percentile, and 80th percentile were
 calculated for flipper length across the three species (Adelie,
-Chinstrap, and Gentoo). The boxplot shows the distribution of flipper
+Chinstrap, and Gentoo). The boxplots show the distribution of flipper
 length for each species.
 
 ### Example #4: Error from invalid argument
