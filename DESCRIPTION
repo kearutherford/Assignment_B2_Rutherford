@@ -17,7 +17,6 @@ Imports:
     ggplot2,
     magrittr,
     stats,
-    tibble,
     tidyr
 Suggests: 
     testthat (>= 3.0.0),
