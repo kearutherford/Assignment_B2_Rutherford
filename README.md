@@ -11,7 +11,7 @@ the categorical variable.
 
 ## Installation instructions
 
-Install `summarystatistics` package from GitHub:
+To install `summarystatistics` package from GitHub use:
 
 ``` r
 devtools::install_github("kearutherford/Assignment_B2_Rutherford")
@@ -20,8 +20,7 @@ devtools::install_github("kearutherford/Assignment_B2_Rutherford")
 ## Demonstrations
 
 ``` r
-# Load required packages -------------------------------------------------------
-
+# Load required packages -----------------------------------------------------------------------------
 suppressPackageStartupMessages(library(datateachr))
 suppressPackageStartupMessages(library(gapminder))
 suppressPackageStartupMessages(library(palmerpenguins))
@@ -49,14 +48,14 @@ variable with a character class for the `categoric_var` argument. The
 default arguments are kept (`prob1` = 0.25, `prob2` = 0.75, `na.rm` =
 TRUE).
 
-| Argument      | Input           | Description                                                                    | Class     |
-|:--------------|:----------------|:-------------------------------------------------------------------------------|:----------|
-| data          | vancouver_trees | the data set provides an inventory of the public street trees in Vancouver, BC | tbl_df    |
-| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                                       | character |
-| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches                             | numeric   |
+| Argument      | Input           | Description                                                       | Class     |
+|:--------------|:----------------|:------------------------------------------------------------------|:----------|
+| data          | vancouver_trees | provides an inventory of the public street trees in Vancouver, BC | tbl_df    |
+| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                          | character |
+| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches                | numeric   |
 
 ``` r
-# Run summarize_stats() function with Van_trees_2 data set ---------------------
+# Run summarize_stats() function with vancouver_trees data set ---------------------------------------
 summarize_stats(data = datateachr::vancouver_trees, 
                 categoric_var = root_barrier,
                 numeric_var = diameter)
@@ -86,14 +85,14 @@ variable with a factor class for the `categoric_var` argument. The
 `prob1` and `prob2` default arguments are altered to `prob1` = 0.1 and
 `prob2` = 0.9. The default argument `na.rm = TRUE` is kept.
 
-| Argument      | Input     | Description                                            | Class   |
-|:--------------|:----------|:-------------------------------------------------------|:--------|
-| data          | gapminder | the data set provides global socioeconomic information | tbl_df  |
-| categoric_var | continent | five continents                                        | factor  |
-| numeric_var   | lifeExp   | life expectancy at birth                               | numeric |
+| Argument      | Input     | Description                               | Class   |
+|:--------------|:----------|:------------------------------------------|:--------|
+| data          | gapminder | contains global socioeconomic information | tbl_df  |
+| categoric_var | continent | five continents                           | factor  |
+| numeric_var   | lifeExp   | life expectancy at birth                  | numeric |
 
 ``` r
-# Run summarize_stats() function with van_trees_2 data set ---------------------
+# Run summarize_stats() function with gapminder data set ---------------------------------------------
 summarize_stats(data = gapminder::gapminder, 
                 categoric_var = continent,
                 numeric_var = lifeExp,
@@ -129,14 +128,14 @@ argument. The `prob1` and `prob2` default arguments are altered to
 `prob1` = 0.2 and `prob2` = 0.8. The default argument `na.rm = TRUE` is
 kept.
 
-| Argument      | Input             | Description                                                        |
-|:--------------|:------------------|:-------------------------------------------------------------------|
-| data          | penguins          | the data set provides size measurements for penguins in Antarctica |
-| categoric_var | species           | three penguin species                                              |
-| numeric_var   | flipper_length_mm | flipper length in mm                                               |
+| Argument      | Input             | Description                                           |
+|:--------------|:------------------|:------------------------------------------------------|
+| data          | penguins          | provides size measurements for penguins in Antarctica |
+| categoric_var | species           | three penguin species                                 |
+| numeric_var   | flipper_length_mm | flipper length in millimeters                         |
 
 ``` r
-# Run summarize_stats() function with van_trees_2 data set ---------------------
+# Run summarize_stats() function with penguins data set ----------------------------------------------
 summarize_stats(data = palmerpenguins::penguins, 
                 categoric_var = species,
                 numeric_var = flipper_length_mm,
@@ -154,9 +153,10 @@ summarize_stats(data = palmerpenguins::penguins,
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
 **Description of output:** The output is a list with two items: a tibble
 of summary statistics and a simple boxplot. For the summary tibble, the
-minimum, maximum, mean, 20th percentile, and 90th percentile were
+minimum, maximum, mean, 20th percentile, and 80th percentile were
 calculated for flipper length across the three species (Adelie,
 Chinstrap, and Gentoo). The boxplot shows the distribution of flipper
 length for each species.
@@ -166,14 +166,14 @@ length for each species.
 **Description of inputs:** This forth example demonstrates inputting a
 factor variable for the `numeric_var` argument.
 
-| Argument      | Input    | Description                                                        |
-|:--------------|:---------|:-------------------------------------------------------------------|
-| data          | penguins | the data set provides size measurements for penguins in Antarctica |
-| categoric_var | species  | three penguin species                                              |
-| numeric_var   | island   | three islands                                                      |
+| Argument      | Input    | Description                                           | Class     |
+|:--------------|:---------|:------------------------------------------------------|:----------|
+| data          | penguins | provides size measurements for penguins in Antarctica | tbl_df    |
+| categoric_var | species  | three penguin species                                 | character |
+| numeric_var   | island   | three islands                                         | factor    |
 
 ``` r
-# Run summarize_stats() function with van_trees_2 data set --------------------------------------------------------------------------------
+# Run summarize_stats() function with penguins data set ----------------------------------------------
 summarize_stats(data = palmerpenguins::penguins, 
                 categoric_var = species,
                 numeric_var = island)

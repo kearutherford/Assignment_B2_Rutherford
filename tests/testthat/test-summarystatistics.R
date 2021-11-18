@@ -1,10 +1,3 @@
-#library(datateachr)
-#library(palmerpenguins)
-#library(dplyr)
-#library(tidyr)
-#library(ggplot2)
-#library(tibble)
-
 test_that("Test function for type/class of output", {
   expect_type((summarize_stats(datateachr::vancouver_trees, root_barrier, diameter)), "list")
   expect_s3_class((summarize_stats(datateachr::vancouver_trees, root_barrier, diameter)[[1]]), "tbl_df")

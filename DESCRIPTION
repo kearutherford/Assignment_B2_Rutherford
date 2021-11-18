@@ -22,5 +22,6 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0),
     datateachr,
-    gapminder
+    gapminder,
+    palmerpenguins
 Config/testthat/edition: 3
