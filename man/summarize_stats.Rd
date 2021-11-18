@@ -18,7 +18,7 @@ summarize_stats(
 
 \item{categoric_var}{A categorical variable with a factor or character class. The parameter name reflects the input requirement. The summary statistics are calculated across the different groups of this variable.}
 
-\item{numeric_var}{A variable with a class of numeric. The parameter name is based on the input requirement. The summary statistics are computed for this variable.}
+\item{numeric_var}{A variable with a class of numeric. The parameter name is based on the input requirement. The five summary statistics are computed for this variable.}
 
 \item{prob1}{A numeric value between 0 and 1 that determines the percentile used for the first quantile. The default is set to prob1 = 0.25, representing the first quartile.}
 

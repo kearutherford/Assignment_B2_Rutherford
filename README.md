@@ -1,5 +1,5 @@
 
-# summarystatistics
+# summarystatistics descrtiption
 
 The R package `summarystatistics` includes the function
 `summarize_stats`. The function computes five summary statistics
@@ -27,7 +27,6 @@ suppressPackageStartupMessages(library(palmerpenguins))
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(magrittr))
-suppressPackageStartupMessages(library(tibble))
 suppressPackageStartupMessages(library(tidyr))
 suppressPackageStartupMessages(library(summarystatistics))
 ```
@@ -43,16 +42,16 @@ included in the `palmerpenguins` package.
 
 ### Example #1: Character variable input, keep default arguments
 
-**Description of inputs:** This first example demonstrates inputting a
-variable with a character class for the `categoric_var` argument. The
-default arguments are kept (`prob1` = 0.25, `prob2` = 0.75, `na.rm` =
-TRUE).
+**Description of inputs:**  
+This example demonstrates inputting a variable with a character class
+for the `categoric_var` argument. The default arguments are kept
+(`prob1` = 0.25, `prob2` = 0.75, `na.rm` = TRUE).
 
-| Argument      | Input           | Description                                                       | Class     |
-|:--------------|:----------------|:------------------------------------------------------------------|:----------|
-| data          | vancouver_trees | provides an inventory of the public street trees in Vancouver, BC | tbl_df    |
-| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                          | character |
-| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches                | numeric   |
+| Argument      | Input           | Description of Input                                          | Class of Input |
+|:--------------|:----------------|:--------------------------------------------------------------|:---------------|
+| data          | vancouver_trees | provides an inventory of public street trees in Vancouver, BC | tbl_df         |
+| categoric_var | root_barrier    | root_barrier installed (Y = Yes, N = No)                      | character      |
+| numeric_var   | diameter        | diameter at breast height (DBH) of trees in inches            | numeric        |
 
 ``` r
 # Run summarize_stats() function with vancouver_trees data set ---------------------------------------
@@ -80,16 +79,17 @@ barrier groups.
 
 ### Example #2: Factor variable input, alter default arguments
 
-**Description of inputs:** This second example demonstrates inputting a
-variable with a factor class for the `categoric_var` argument. The
-`prob1` and `prob2` default arguments are altered to `prob1` = 0.1 and
-`prob2` = 0.9. The default argument `na.rm = TRUE` is kept.
+**Description of inputs:**  
+This example demonstrates inputting a variable with a factor class for
+the `categoric_var` argument. The `prob1` and `prob2` arguments are set
+to `prob1` = 0.1 and `prob2` = 0.9. The default argument `na.rm = TRUE`
+is kept.
 
-| Argument      | Input     | Description                               | Class   |
-|:--------------|:----------|:------------------------------------------|:--------|
-| data          | gapminder | contains global socioeconomic information | tbl_df  |
-| categoric_var | continent | five continents                           | factor  |
-| numeric_var   | lifeExp   | life expectancy at birth                  | numeric |
+| Argument      | Input     | Description of Input                                      | Class of Input |
+|:--------------|:----------|:----------------------------------------------------------|:---------------|
+| data          | gapminder | contains global socioeconomic information                 | tbl_df         |
+| categoric_var | continent | five continents (Africa, Americas, Asia, Europe, Oceania) | factor         |
+| numeric_var   | lifeExp   | life expectancy at birth                                  | numeric        |
 
 ``` r
 # Run summarize_stats() function with gapminder data set ---------------------------------------------
@@ -122,17 +122,17 @@ of life expectancy for each continent.
 
 ### Example #3: Factor variable input, alter default arguments
 
-**Description of inputs:** This third example also demonstrates
-inputting a variable with a factor class for the `categoric_var`
-argument. The `prob1` and `prob2` default arguments are altered to
-`prob1` = 0.2 and `prob2` = 0.8. The default argument `na.rm = TRUE` is
-kept.
+**Description of inputs:**  
+This example also demonstrates inputting a variable with a factor class
+for the `categoric_var` argument. The `prob1` and `prob2` arguments are
+set to `prob1` = 0.2 and `prob2` = 0.8. The default argument
+`na.rm = TRUE` is kept.
 
-| Argument      | Input             | Description                                           |
-|:--------------|:------------------|:------------------------------------------------------|
-| data          | penguins          | provides size measurements for penguins in Antarctica |
-| categoric_var | species           | three penguin species                                 |
-| numeric_var   | flipper_length_mm | flipper length in millimeters                         |
+| Argument      | Input             | Description of Input                                  | Class of Input |
+|:--------------|:------------------|:------------------------------------------------------|:---------------|
+| data          | penguins          | contains size measurements for penguins in Antarctica | tbl_df         |
+| categoric_var | species           | three penguin species (Adelie, Chinstrap, Gentoo)     | factor         |
+| numeric_var   | flipper_length_mm | flipper length in millimeters                         | numeric        |
 
 ``` r
 # Run summarize_stats() function with penguins data set ----------------------------------------------
@@ -163,14 +163,15 @@ length for each species.
 
 ### Example #4: Error from invalid argument
 
-**Description of inputs:** This forth example demonstrates inputting a
-factor variable for the `numeric_var` argument.
+**Description of inputs:**  
+This example demonstrates inputting a factor variable for the
+`numeric_var` argument.
 
-| Argument      | Input    | Description                                           | Class     |
-|:--------------|:---------|:------------------------------------------------------|:----------|
-| data          | penguins | provides size measurements for penguins in Antarctica | tbl_df    |
-| categoric_var | species  | three penguin species                                 | character |
-| numeric_var   | island   | three islands                                         | factor    |
+| Argument      | Input    | Description of Input                                  | Class of Input |
+|:--------------|:---------|:------------------------------------------------------|:---------------|
+| data          | penguins | contains size measurements for penguins in Antarctica | tbl_df         |
+| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | character      |
+| numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor         |
 
 ``` r
 # Run summarize_stats() function with penguins data set ----------------------------------------------
