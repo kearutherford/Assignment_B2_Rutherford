@@ -66,7 +66,7 @@ summarize_stats(data = datateachr::vancouver_trees,
 **Description of inputs:**  
 This example demonstrates inputting a variable with a factor class for the `categoric_var` argument. The ` prob1` and `prob2` arguments are set to `prob1` = 0.1 and `prob2` = 0.9. The default argument `na.rm = TRUE` is kept.  
 
-|Argument|Input|Description of Input|Class of Input|
+|Argument|Input|Description of Input|Class|
 |:---|:---|:---|:---|
 |data|gapminder|contains global socioeconomic information|tbl_df|
 |categoric_var|continent|five continents (Africa, Americas, Asia, Europe, Oceania)|factor|
@@ -81,14 +81,14 @@ summarize_stats(data = gapminder::gapminder,
                 prob2 = 0.9)
 ```
 
-**Description of output:** The output is a list with two items: a tibble of summary statistics and a simple boxplot. For the summary tibble, the minimum, maximum, mean, 10th percentile, and 90th percentile were calculated for life expectancy across the five continents (Africa, Americas, Asia, Europe, and Oceania). The boxplots show the distribution of life expectancy for each continent.  
+**Description of output:** The output is a list with two items: a tibble of summary statistics and a simple boxplot. For the summary tibble, the minimum, maximum, mean, 10th percentile, and 90th percentile were calculated for life expectancy across the five continents (Africa, Americas, Asia, Europe, and Oceania). The boxplots show the distribution of life expectancy for each continent.
 
 ### Example #3: Factor variable input, alter default arguments  
 
 **Description of inputs:**  
 This example also demonstrates inputting a variable with a factor class for the `categoric_var` argument. The ` prob1` and `prob2` arguments are set to `prob1` = 0.2 and `prob2` = 0.8. The default argument `na.rm = TRUE` is kept.  
 
-|Argument|Input|Description of Input|Class of Input|
+|Argument|Input|Description of Input|Class|
 |:---|:---|:---|:---|
 |data|penguins|contains size measurements for penguins in Antarctica|tbl_df|
 |categoric_var|species|three penguin species (Adelie, Chinstrap, Gentoo)|factor|
@@ -110,7 +110,7 @@ summarize_stats(data = palmerpenguins::penguins,
 **Description of inputs:**  
 This example demonstrates inputting a factor variable for the `numeric_var` argument.  
 
-|Argument|Input|Description of Input|Class of Input|
+|Argument|Input|Description of Input|Class|
 |:---|:---|:---|:---|
 |data|penguins|contains size measurements for penguins in Antarctica|tbl_df|
 |categoric_var|species|three penguin species (Adelie, Chinstrap, Gentoo)|character|

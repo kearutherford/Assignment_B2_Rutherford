@@ -84,11 +84,11 @@ the `categoric_var` argument. The `prob1` and `prob2` arguments are set
 to `prob1` = 0.1 and `prob2` = 0.9. The default argument `na.rm = TRUE`
 is kept.
 
-| Argument      | Input     | Description of Input                                      | Class of Input |
-|:--------------|:----------|:----------------------------------------------------------|:---------------|
-| data          | gapminder | contains global socioeconomic information                 | tbl_df         |
-| categoric_var | continent | five continents (Africa, Americas, Asia, Europe, Oceania) | factor         |
-| numeric_var   | lifeExp   | life expectancy at birth                                  | numeric        |
+| Argument      | Input     | Description of Input                                      | Class   |
+|:--------------|:----------|:----------------------------------------------------------|:--------|
+| data          | gapminder | contains global socioeconomic information                 | tbl_df  |
+| categoric_var | continent | five continents (Africa, Americas, Asia, Europe, Oceania) | factor  |
+| numeric_var   | lifeExp   | life expectancy at birth                                  | numeric |
 
 ``` r
 # Run summarize_stats() function with gapminder data set ---------------------------------------------
@@ -127,11 +127,11 @@ for the `categoric_var` argument. The `prob1` and `prob2` arguments are
 set to `prob1` = 0.2 and `prob2` = 0.8. The default argument
 `na.rm = TRUE` is kept.
 
-| Argument      | Input             | Description of Input                                  | Class of Input |
-|:--------------|:------------------|:------------------------------------------------------|:---------------|
-| data          | penguins          | contains size measurements for penguins in Antarctica | tbl_df         |
-| categoric_var | species           | three penguin species (Adelie, Chinstrap, Gentoo)     | factor         |
-| numeric_var   | flipper_length_mm | flipper length in millimeters                         | numeric        |
+| Argument      | Input             | Description of Input                                  | Class   |
+|:--------------|:------------------|:------------------------------------------------------|:--------|
+| data          | penguins          | contains size measurements for penguins in Antarctica | tbl_df  |
+| categoric_var | species           | three penguin species (Adelie, Chinstrap, Gentoo)     | factor  |
+| numeric_var   | flipper_length_mm | flipper length in millimeters                         | numeric |
 
 ``` r
 # Run summarize_stats() function with penguins data set ----------------------------------------------
@@ -166,11 +166,11 @@ length for each species.
 This example demonstrates inputting a factor variable for the
 `numeric_var` argument.
 
-| Argument      | Input    | Description of Input                                  | Class of Input |
-|:--------------|:---------|:------------------------------------------------------|:---------------|
-| data          | penguins | contains size measurements for penguins in Antarctica | tbl_df         |
-| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | character      |
-| numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor         |
+| Argument      | Input    | Description of Input                                  | Class     |
+|:--------------|:---------|:------------------------------------------------------|:----------|
+| data          | penguins | contains size measurements for penguins in Antarctica | tbl_df    |
+| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | character |
+| numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor    |
 
 ``` r
 # Run summarize_stats() function with penguins data set ----------------------------------------------
