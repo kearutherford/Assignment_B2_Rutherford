@@ -1,8 +1,9 @@
-library(datateachr)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(tibble)
+#library(datateachr)
+#library(palmerpenguins)
+#library(dplyr)
+#library(tidyr)
+#library(ggplot2)
+#library(tibble)
 
 test_that("Test function for type/class of output", {
   expect_type((summarize_stats(datateachr::vancouver_trees, root_barrier, diameter)), "list")
@@ -24,5 +25,5 @@ test_that("Test for expected error messages for invalid arguments", {
 })
 
 test_that("Test that NA handling works", {
-  expect_error(summarize_stats(datateachr::building_permits, type_of_work, project_value, na.rm = FALSE))
+  expect_error(summarize_stats(palmerpenguins::penguins, species, flipper_length_mm, na.rm = FALSE))
 })

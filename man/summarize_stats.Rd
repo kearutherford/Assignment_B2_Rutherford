@@ -41,15 +41,15 @@ summarize_stats(data = datateachr::vancouver_trees,
                categoric_var = root_barrier,
                numeric_var = diameter)
 
-summarize_stats(data = datateachr::vancouver_trees,
-               categoric_var = root_barrier,
-               numeric_var = diameter,
-               prob1 = 0.1,
-               prob2 = 0.9)
-
 summarize_stats(data = gapminder::gapminder,
                categoric_var = continent,
                numeric_var = lifeExp,
+               prob1 = 0.1,
+               prob2 = 0.9)
+
+summarize_stats(data = palmerpenguins::penguins,
+               categoric_var = species,
+               numeric_var = flipper_length_mm,
                prob1 = 0.2,
                prob2 = 0.8)
 
