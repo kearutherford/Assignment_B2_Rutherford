@@ -23,13 +23,6 @@ devtools::install_github("kearutherford/Assignment_B2_Rutherford")
 suppressPackageStartupMessages(library(datateachr))
 suppressPackageStartupMessages(library(gapminder))
 suppressPackageStartupMessages(library(palmerpenguins))
-#suppressPackageStartupMessages(library(dplyr))
-#suppressPackageStartupMessages(library(ggplot2))
-#suppressPackageStartupMessages(library(magrittr))
-#suppressPackageStartupMessages(library(stats))
-#suppressPackageStartupMessages(library(tibble))
-#suppressPackageStartupMessages(library(tidyr))
-#suppressPackageStartupMessages(library(testthat))
 suppressPackageStartupMessages(library(summarystatistics))
 ```
 
@@ -172,7 +165,7 @@ This example demonstrates inputting a factor variable for the
 | Argument      | Input    | Description of Input                                  | Class  |
 |:--------------|:---------|:------------------------------------------------------|:-------|
 | data          | penguins | contains size measurements for penguins in Antarctica | tbl_df |
-| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | factor |
+| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     |        |
 | numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor |
 
 ``` r

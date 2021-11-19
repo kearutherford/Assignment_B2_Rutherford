@@ -1,6 +1,6 @@
-#' @title Summary Statistics
+#' Summary Statistics
 #'
-#' @description The function computes five summary statistics (minimum, maximum, mean, and two quantiles) of a numerical variable across the groups of a categorical variable. The function also produces simple boxplots that allow for the visual comparison of distributions between the groups of the categorical variable.
+#' The function computes five summary statistics (minimum, maximum, mean, and two quantiles) of a numerical variable across the groups of a categorical variable. The function also produces simple boxplots that allow for the visual comparison of distributions between the groups of the categorical variable.
 #'
 #' @param data A data frame that includes the columns of interest. The input for this argument must be an object of class data.frame. The parameter name is based on the input requirement.
 #' @param categoric_var A categorical variable with a factor or character class. The parameter name reflects the input requirement. The summary statistics are calculated across the different groups of this variable.
