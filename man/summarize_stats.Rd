@@ -20,9 +20,9 @@ summarize_stats(
 
 \item{numeric_var}{A variable with a class of numeric. The parameter name is based on the input requirement. The five summary statistics are computed for this variable.}
 
-\item{prob1}{A numeric value between 0 and 1 that determines the percentile used for the first quantile. The default is set to prob1 = 0.25, representing the first quartile.}
+\item{prob1}{A numeric value between 0 and 1 that determines the probability used for the first quantile. The default is set to prob1 = 0.25, representing the first quartile.}
 
-\item{prob2}{A numeric value between 0 and 1 that determines the percentile used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.}
+\item{prob2}{A numeric value between 0 and 1 that determines the probability used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.}
 
 \item{na.rm}{A logical value that specifies if NA values should be removed before the calculation. The default is set to na.rm = TRUE.}
 }

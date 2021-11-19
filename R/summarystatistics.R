@@ -5,8 +5,8 @@
 #' @param data A data frame that includes the columns of interest. The input for this argument must be an object of class data.frame. The parameter name is based on the input requirement.
 #' @param categoric_var A categorical variable with a factor or character class. The parameter name reflects the input requirement. The summary statistics are calculated across the different groups of this variable.
 #' @param numeric_var A variable with a class of numeric. The parameter name is based on the input requirement. The five summary statistics are computed for this variable.
-#' @param prob1 A numeric value between 0 and 1 that determines the percentile used for the first quantile. The default is set to prob1 = 0.25, representing the first quartile.
-#' @param prob2 A numeric value between 0 and 1 that determines the percentile used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.
+#' @param prob1 A numeric value between 0 and 1 that determines the probability used for the first quantile. The default is set to prob1 = 0.25, representing the first quartile.
+#' @param prob2 A numeric value between 0 and 1 that determines the probability used for the second quantile. The default is set to prob2 = 0.75, representing the third quartile.
 #' @param na.rm A logical value that specifies if NA values should be removed before the calculation. The default is set to na.rm = TRUE.
 #'
 #' @return A list with the following two items:
