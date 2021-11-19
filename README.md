@@ -169,11 +169,11 @@ length for each species.
 This example demonstrates inputting a factor variable for the
 `numeric_var` argument.
 
-| Argument      | Input    | Description of Input                                  | Class     |
-|:--------------|:---------|:------------------------------------------------------|:----------|
-| data          | penguins | contains size measurements for penguins in Antarctica | tbl_df    |
-| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | character |
-| numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor    |
+| Argument      | Input    | Description of Input                                  | Class  |
+|:--------------|:---------|:------------------------------------------------------|:-------|
+| data          | penguins | contains size measurements for penguins in Antarctica | tbl_df |
+| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | factor |
+| numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor |
 
 ``` r
 # Run summarize_stats() function with penguins data set ----------------------------------------------
