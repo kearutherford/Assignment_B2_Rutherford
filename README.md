@@ -19,7 +19,7 @@ devtools::install_github("kearutherford/Assignment_B2_Rutherford")
 ## Demonstrations
 
 ``` r
-# Load required packages -----------------------------------------------------------------------------
+# Load packages --------------------------------------------------------------------------------------
 suppressPackageStartupMessages(library(datateachr))
 suppressPackageStartupMessages(library(gapminder))
 suppressPackageStartupMessages(library(palmerpenguins))
