@@ -5,8 +5,8 @@ The R package `summarystatistics` includes the function
 `summarize_stats`. The function computes five summary statistics
 (minimum, maximum, mean, and two quantiles) of a numerical variable
 across the groups of a categorical variable. The function also produces
-simple boxplots that allow for the visual comparison of distributions
-between the groups of the categorical variable.
+a simple set of boxplots that allows for the visual comparison of
+distributions between the groups of the categorical variable.
 
 ## Installation instructions
 

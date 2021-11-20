@@ -34,7 +34,7 @@ A list with the following two items:
 }
 }
 \description{
-The function computes five summary statistics (minimum, maximum, mean, and two quantiles) of a numerical variable across the groups of a categorical variable. The function also produces simple boxplots that allow for the visual comparison of distributions between the groups of the categorical variable.
+The function computes five summary statistics (minimum, maximum, mean, and two quantiles) of a numerical variable across the groups of a categorical variable. The function also produces a simple set of boxplots that allows for the visual comparison of distributions between the groups of the categorical variable.
 }
 \examples{
 summarize_stats(data = datateachr::vancouver_trees,
