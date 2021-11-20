@@ -165,7 +165,7 @@ This example demonstrates inputting a factor variable for the
 | Argument      | Input    | Description of Input                                  | Class  |
 |:--------------|:---------|:------------------------------------------------------|:-------|
 | data          | penguins | contains size measurements for penguins in Antarctica | tbl_df |
-| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     |        |
+| categoric_var | species  | three penguin species (Adelie, Chinstrap, Gentoo)     | factor |
 | numeric_var   | island   | three islands (Biscoe, Dream, Torgersen)              | factor |
 
 ``` r
