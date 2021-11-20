@@ -1,5 +1,5 @@
 
-# summarystatistics descrtiption
+# summarystatistics
 
 The R package `summarystatistics` includes the function
 `summarize_stats`. The function computes five summary statistics
